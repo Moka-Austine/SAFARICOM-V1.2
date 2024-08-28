@@ -1,0 +1,33 @@
+    //======= USER INFORMATION =================
+    private String USER_NAME = "Justine Muthuri";
+    private String USER_PASSWORD = "1234";
+    private String MOBILE_NUMBER = "0123456789";
+    private String Id_NUMBER = "12345678";
+
+    //========= AGENT INFORMATION=========================
+    private String AGENT_PASSWORD = "1111";
+    private String STORE_NUMBER = "12345";
+    private String AGENT_NUMBER = "54321";
+    private String AGENT_NAME = "tuko pamoja";
+    
+
+    //? updating user information and returnig String[] array
+    /**public static String[] updating_user_info(String[] user_info_array, String user_account_name, String  user_mobile_num_pin, String shuffled_mobile_num, String user_id_num) {
+
+        user_info_array[0] = user_account_name;
+        user_info_array[1] = user_mobile_num_pin;
+        //String string_shuffled_mobile_num1 = String.format("", shuffled_mobile_num1);
+        //System.out.print(string_shuffled_mobile_num1);
+        user_info_array[2] = shuffled_mobile_num; 
+        user_info_array[3] = user_id_num;
+
+        System.out.println(user_account_name + ", Thank you for choosing Safaricom. Here are our services:");
+
+        System.out.println(user_info_array[0]);
+        System.out.println(user_info_array[1]);
+        System.out.println(user_info_array[2]);
+        System.out.println(user_info_array[3]);
+
+        return user_info_array;
+    }
+**/
