@@ -1,5 +1,6 @@
 package SAFARICOM_APP;
 
+//? used for password validation
 public class validNumber {
     
      //? CHECKING IF AMOUNT INPUT IS A NUMBER ====================================================
@@ -15,9 +16,10 @@ public class validNumber {
      //? CHECKING IF PASSWORD LENGTH IS EQUAL TO FOUR AND VALID NUM ====================================================
       public String password_length(String input){
 
-        boolean num = isNotNumber(input);
-
-        if (num == true) {
+        boolean num = isNotNumber(input);// if its not a number then it'll be true
+       
+        //if valid number
+        if (num == false) {
           if(input.length() == 4) {
             String value = "valid 4 digits";
             return value;
@@ -31,6 +33,8 @@ public class validNumber {
             return value;
           }
         }
+
+        //if not a valid number
         else{
           String not_num = "not a valid number";
           return not_num;
@@ -38,3 +42,4 @@ public class validNumber {
     }
 
 }
+
