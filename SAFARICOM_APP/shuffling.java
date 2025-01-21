@@ -1,9 +1,9 @@
 package SAFARICOM_APP;
 
-import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class shuffling {
      
@@ -17,7 +17,9 @@ public class shuffling {
 
      static String user_answer, shuffled_mobile_num1, shuffled_mobile_num2, shuffled_mobile_num3;
 
-     // if user chooses option 1, 2, 3 of shuffled numbers
+     //?====================================================
+
+     //! if user chooses option 1, 2, 3 of shuffled numbers===========================================================================
      static void shuffled_option_num(String zero_seven_or_one, String option) {
 
         //safAccount updateUserInfo = new safAccount();
@@ -97,23 +99,28 @@ public class shuffling {
          System.out.println("Invalid choice, please try again: ");
         }
 
-    }
+    }//!=================================================================================================================
      
+
+    //? shuffling user mobile numbers and returning chosen option ===========================================================================================
      static String shuffling_mobile_numbers (String shuffledNum1, String shuffledNum2, String shuffledNum3 ) {
          
          shuffled_mobile_num1 = shuffledNum1;
          shuffled_mobile_num2 = shuffledNum2;
          shuffled_mobile_num3 = shuffledNum3;
  
-         System.out.println("Please choose the mobile Number you prefer;\n 1." + "07" + shuffled_mobile_num1 + "\n 2." + "01" + shuffled_mobile_num2 + "\n 3." + "07" + shuffled_mobile_num3);
+         System.out.println("""
+                            Please choose the mobile Number you prefer;
+                             1.07""" + shuffled_mobile_num1 + "\n 2." + "01" + shuffled_mobile_num2 + "\n 3." + "07" + shuffled_mobile_num3);
          System.out.print("Enter your option (1, 2, 3) to choose number or enter anything else to shuffle the numbers: ");
  
          user_answer = prompt_user.nextLine();
          return user_answer;
          
-     }
+     }//? ===============================================================================================================
  
     
+     //! getting random numbers from int num  every tine when method runs======================================================================
      public static String shuffling_numbers() {
          // Original number
          int num = 12345678;
@@ -141,7 +148,7 @@ public class shuffling {
          String shuffledNum_str = String.valueOf(shuffledNum);
          return shuffledNum_str;
  
-     }
+     }//!==============================================================================================================
 
 
      
