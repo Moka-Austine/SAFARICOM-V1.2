@@ -29,10 +29,10 @@ public class deposit {
         boolean VALID_DEPOSIT_NUN = Valid_num.isNotNumber(deposit);
         boolean VALID_AGENT_PASWORD = Valid_num.isNotNumber(deposit);
 
-        
+        //? if mobile number, id number, deposit amount and agent password are valid values.
         try {
             
-            if (VALID_MOBILE_NUN == true && VALID_ID_NUN == true && VALID_DEPOSIT_NUN == true && VALID_AGENT_PASWORD == true) {
+            if (VALID_MOBILE_NUN == false && VALID_ID_NUN == false && VALID_DEPOSIT_NUN == false && VALID_AGENT_PASWORD == false) {
                 
                 amount = Double.parseDouble(deposit);
 
@@ -60,7 +60,7 @@ public class deposit {
                     System.out.println("Amount is too high to deposit.Please try a lower amount.");
         
                 }
-                else if (agent_password != AGENT_INFO[0]) {
+                else if (agent_password.equals(AGENT_INFO[0])) {
                     System.out.println("Invalid password. You have 2 remaining trials to input correct password. Inputing more than three times you will be blocked.");
                 }
                 else {
@@ -68,18 +68,19 @@ public class deposit {
                 }
             }
         } 
-        
+         
+        //? if one or all values of mobile number, id number, deposit amount and agent password are not valid.
         catch (NumberFormatException e) {
             
-            if ( VALID_MOBILE_NUN == false ) {
+            if ( VALID_MOBILE_NUN == true ) {
                 System.out.println("Invalid mobile number. Please re-enter again.");
             }
 
-            else if ( VALID_ID_NUN == false ) {
+            else if ( VALID_ID_NUN == true ) {
                 System.out.println("Invalid format, ID number must be a number. Please re-enter again.");
             }
 
-            else if ( VALID_DEPOSIT_NUN == false ) {
+            else if ( VALID_DEPOSIT_NUN == true ) {
                 System.out.println("Invalid format, amount must be a number. Please re-enter again.");
             }
 
@@ -87,10 +88,7 @@ public class deposit {
                 System.out.println("Invalid format, password must be a number. Please re-enter again.");
             }
         }
-        
-
-
-        
+       
 
     }   
         
